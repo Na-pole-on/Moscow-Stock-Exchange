@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
+  <CompilationType>CSharp</CompilationType>
+  <Description i:nil="true" />
+  <Id>98b4e965-499f-4773-b6d9-34ff229541f6</Id>
+  <Logic z:Id="i2" i:type="ExecutedStep">
+    <Childs>
+      <AbstractStep z:Id="i3" i:type="ExecutedStep">
+        <Childs />
+        <Id>f9373bc0-203c-4659-94bd-c76df17ee8d5</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i4">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"GetConfig.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i5">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i6">
+                <d7p1:ArgumentName>Config</d7p1:ArgumentName>
+                <d7p1:Expression>Config</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.String&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i7">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Получение данных из Config</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i8" i:type="ExecutedStep">
+        <Childs />
+        <Id>51d20516-5cb2-4444-8e3a-41aa83d7c138</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i9">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"GetDateFromExcel.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i10">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i11">
+                <d7p1:ArgumentName>Period</d7p1:ArgumentName>
+                <d7p1:Expression>Period</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.DateTime&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i12">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Получить период</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i13" i:type="ExecutedStep">
+        <Childs />
+        <Id>95bb7635-bf2d-4ef8-9b47-8adb63bd95a5</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i14">
+            <PropertyName>ProfilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression></_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i15">
+            <PropertyName>URL</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Config["SitePath"]</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i16">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">10</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i17">
+            <PropertyName>LaunchArgs</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"--start-maximized"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i18">
+            <PropertyName>TabHeader</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression></_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i19">
+            <PropertyName>TabUrl</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression></_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i20">
+            <PropertyName>ExactMatch</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i21">
+            <PropertyName>IncognitoMode</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i22">
+            <PropertyName>Browser</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>browser</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId>0</SelectedOptionId>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Переход на МосБиржу</Text>
+        <_activityFullName>Activities.Web.LaunchChrome</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i23" i:type="ExecutedStep">
+        <Childs />
+        <Id>dbb918cb-3ebb-4b6a-b6c7-2edb3539c032</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i24">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"GoToExchangeRatesPage.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i25">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i26">
+                <d7p1:ArgumentName>Browser</d7p1:ArgumentName>
+                <d7p1:Expression>browser</d7p1:Expression>
+                <d7p1:Type>Web.Core.WebBrowser</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i27">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Переход на Индикативные курсы валют</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i28" i:type="ExecutedStep">
+        <Childs />
+        <Id>82282799-2451-4e86-9f46-be51ca63dd32</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i29">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"GetDataFromUSD-RUB.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i30">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i31">
+                <d7p1:ArgumentName>Period</d7p1:ArgumentName>
+                <d7p1:Expression>Period</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.DateTime&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i32">
+                <d7p1:ArgumentName>Browser</d7p1:ArgumentName>
+                <d7p1:Expression>browser</d7p1:Expression>
+                <d7p1:Type>Web.Core.WebBrowser</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i33">
+                <d7p1:ArgumentName>TableUSD_RUB</d7p1:ArgumentName>
+                <d7p1:Expression>TableUSD_RUB</d7p1:Expression>
+                <d7p1:Type>System.Data.DataTable</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i34">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Получение таблицы USD-RUB</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i35" i:type="ExecutedStep">
+        <Childs />
+        <Id>0f9ca5a8-8c3f-4b6b-916b-cfaa7cf3382f</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i36">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"GetDataFromJPY-RUB.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i37">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i38">
+                <d7p1:ArgumentName>Period</d7p1:ArgumentName>
+                <d7p1:Expression>Period</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.DateTime&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i39">
+                <d7p1:ArgumentName>Browser</d7p1:ArgumentName>
+                <d7p1:Expression>browser</d7p1:Expression>
+                <d7p1:Type>Web.Core.WebBrowser</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i40">
+                <d7p1:ArgumentName>TableJPY_RUB</d7p1:ArgumentName>
+                <d7p1:Expression>TableJPY_RUB</d7p1:Expression>
+                <d7p1:Type>System.Data.DataTable</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i41">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Получение таблицы JPY-RUB</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i42" i:type="ExecutedStep">
+        <Childs />
+        <Id>eef8e6c4-9098-41e1-8f28-7192c478d682</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i43">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"CreateReportExcelFile.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i44">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i45">
+                <d7p1:ArgumentName>TableUSD_RUB</d7p1:ArgumentName>
+                <d7p1:Expression>TableUSD_RUB</d7p1:Expression>
+                <d7p1:Type>System.Data.DataTable</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i46">
+                <d7p1:ArgumentName>TableJPY_RUB</d7p1:ArgumentName>
+                <d7p1:Expression>TableJPY_RUB</d7p1:Expression>
+                <d7p1:Type>System.Data.DataTable</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i47">
+                <d7p1:ArgumentName>CombinedTable</d7p1:ArgumentName>
+                <d7p1:Expression>CombinedTable</d7p1:Expression>
+                <d7p1:Type>System.Data.DataTable</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i48">
+                <d7p1:ArgumentName>Config</d7p1:ArgumentName>
+                <d7p1:Expression>Config</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.String&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i49">
+                <d7p1:ArgumentName>Period</d7p1:ArgumentName>
+                <d7p1:Expression>Period</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.DateTime&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i50">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Создать конечный excel файл</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i51" i:type="ExecutedStep">
+        <Childs />
+        <Id>878c5b81-bef7-49fb-9211-68275a942521</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i52">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"ConvertIntToWords.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i53">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i54">
+                <d7p1:ArgumentName>number</d7p1:ArgumentName>
+                <d7p1:Expression>CombinedTable.Rows.Count</d7p1:Expression>
+                <d7p1:Type>System.Int32</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i55">
+                <d7p1:ArgumentName>Result</d7p1:ArgumentName>
+                <d7p1:Expression>NumberInWords</d7p1:Expression>
+                <d7p1:Type>System.String</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i56">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Преобразование числа</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i57" i:type="ExecutedStep">
+        <Childs />
+        <Id>c97aa355-9ea5-46f5-90ff-cff5a53fd2a7</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i58">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"SendMail.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i59">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i60">
+                <d7p1:ArgumentName>Config</d7p1:ArgumentName>
+                <d7p1:Expression>Config</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.String&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+              <d7p1:ArgumentItem z:Id="i61">
+                <d7p1:ArgumentName>NumberInWords</d7p1:ArgumentName>
+                <d7p1:Expression>NumberInWords</d7p1:Expression>
+                <d7p1:Type>System.String</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i62">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Отправить сообщение</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i63" i:type="ExecutedStep">
+        <Childs />
+        <Id>67001a1f-66c0-4850-84c2-c85e8939c041</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i64">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"DeleteAllFilesInTemp.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i65">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i66">
+                <d7p1:ArgumentName>Config</d7p1:ArgumentName>
+                <d7p1:Expression>Config</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.String&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i67">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Очистка временных файлов</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
+    </Childs>
+    <Id>47d13b46-6a78-492e-b5eb-ea0b394e41fa</Id>
+    <Parent i:nil="true" />
+    <PropertyValues />
+    <SelectedOptionId i:nil="true" />
+    <EnableStatus>true</EnableStatus>
+    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+    <RetryCount>-1</RetryCount>
+    <Text></Text>
+    <_activityFullName>BR.Core.Base.Container</_activityFullName>
+  </Logic>
+  <Name>main.pix</Name>
+  <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <Params>
+    <Parameter z:Id="i68">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>Config</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i69">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>Period</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i70">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>TableUSD_RUB</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Data.DataTable</TypeString>
+    </Parameter>
+    <Parameter z:Id="i71">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>TableJPY_RUB</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Data.DataTable</TypeString>
+    </Parameter>
+    <Parameter z:Id="i72">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>CombinedTable</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Data.DataTable</TypeString>
+    </Parameter>
+    <Parameter z:Id="i73">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>NumberInWords</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.String</TypeString>
+    </Parameter>
+  </Params>
+  <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
+  <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params" />
+  <Version i:nil="true" />
+</Script>
