@@ -55,7 +55,7 @@
           <PropertyValue z:Id="i10">
             <PropertyName>FileName</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"Data\Input\Лист в C  Users user Desktop photo ПЗ Мосбиржа.xlsx"</_expression>
+            <_expression>ListOfPathTempFiles.First()</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
@@ -115,6 +115,13 @@
       <Name>Period</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
+    </Parameter>
+    <Parameter z:Id="i15">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>ListOfPathTempFiles</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
   </Params>
   <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />

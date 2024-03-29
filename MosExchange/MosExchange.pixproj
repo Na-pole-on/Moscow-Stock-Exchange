@@ -43,6 +43,14 @@
       <IsMain>false</IsMain>
       <Path>DeleteAllFilesInTemp.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i12">
+      <IsMain>false</IsMain>
+      <Path>GetMailFromGmail.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i13">
+      <IsMain>false</IsMain>
+      <Path>Data\Config.xlsx</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>MosExchange</Name>

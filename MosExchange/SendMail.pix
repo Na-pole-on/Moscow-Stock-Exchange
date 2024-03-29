@@ -13,7 +13,7 @@
           <PropertyValue z:Id="i4">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Directory.GetFiles(Config["TempFolderPath"]).ToList&lt;string&gt;()</_expression>
+            <_expression>new List&lt;string&gt;() { PathToReports }</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
@@ -34,108 +34,142 @@
       </AbstractStep>
       <AbstractStep z:Id="i6" i:type="ExecutedStep">
         <Childs />
-        <Id>d9c1dca9-3485-44bf-bc1f-d369afcade45</Id>
+        <Id>f8073d92-7ae7-4fe8-ae67-161b43a6a590</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
           <PropertyValue z:Id="i7">
+            <PropertyName>AssetName</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Config["EmailCredentials"]</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i8">
+            <PropertyName>UserName</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>EmailLog</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i9">
+            <PropertyName>Password</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>EmailPas</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>Activities.Credentials.GetCredentials</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i10" i:type="ExecutedStep">
+        <Childs />
+        <Id>d9c1dca9-3485-44bf-bc1f-d369afcade45</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i11">
             <PropertyName>Body</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"В файле ниже " + NumberInWords</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i8">
+          <PropertyValue z:Id="i12">
             <PropertyName>Subject</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"Moscow Stock Exchange"</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i9">
+          <PropertyValue z:Id="i13">
             <PropertyName>IsBodyHtml</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i10">
+          <PropertyValue z:Id="i14">
             <PropertyName>Port</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>int.Parse(Config["Port"])</_expression>
+            <_expression>int.Parse(Config["SendPort"])</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i11">
+          <PropertyValue z:Id="i15">
             <PropertyName>Server</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Config["Server"]</_expression>
+            <_expression>Config["SendServer"]</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i12">
+          <PropertyValue z:Id="i16">
             <PropertyName>Ssl</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">true</_value>
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i13">
+          <PropertyValue z:Id="i17">
             <PropertyName>TimeoutMS</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
             <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">30000</_value>
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i14">
+          <PropertyValue z:Id="i18">
             <PropertyName>Email</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Config["Email"]</_expression>
+            <_expression>EmailLog</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i15">
+          <PropertyValue z:Id="i19">
             <PropertyName>Password</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Config["EmailPassword"]</_expression>
-            <_value i:nil="true" />
-            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-          </PropertyValue>
-          <PropertyValue z:Id="i16">
-            <PropertyName>SecurePassword</PropertyName>
-            <_dataType>Value</_dataType>
             <_expression></_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i17">
+          <PropertyValue z:Id="i20">
+            <PropertyName>SecurePassword</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>EmailPas</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i21">
             <PropertyName>Bcc</PropertyName>
             <_dataType>Value</_dataType>
             <_expression></_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i18">
+          <PropertyValue z:Id="i22">
             <PropertyName>Cc</PropertyName>
             <_dataType>Value</_dataType>
             <_expression></_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i19">
+          <PropertyValue z:Id="i23">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>Config["SendTo"]</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i20">
+          <PropertyValue z:Id="i24">
             <PropertyName>Attachments</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>Files</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i21">
+          <PropertyValue z:Id="i25">
             <PropertyName>IgnoreCertCheck</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
@@ -164,17 +198,24 @@
   <Name>SendMail.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i22">
+    <Parameter z:Id="i26">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Config</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i23">
+    <Parameter z:Id="i27">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>NumberInWords</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.String</TypeString>
+    </Parameter>
+    <Parameter z:Id="i28">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>PathToReports</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
