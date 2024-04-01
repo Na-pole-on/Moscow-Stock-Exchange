@@ -400,7 +400,7 @@
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
               <d7p1:ArgumentItem z:Id="i58">
                 <d7p1:ArgumentName>number</d7p1:ArgumentName>
-                <d7p1:Expression>CombinedTable.Rows.Count - 1</d7p1:Expression>
+                <d7p1:Expression>CombinedTable.Rows.Count</d7p1:Expression>
                 <d7p1:Type>System.Int32</d7p1:Type>
               </d7p1:ArgumentItem>
               <d7p1:ArgumentItem z:Id="i59">
