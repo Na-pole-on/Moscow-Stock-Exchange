@@ -25,29 +25,25 @@
     </ProjectFileItem>
     <ProjectFileItem z:Id="i7">
       <IsMain>false</IsMain>
-      <Path>GetDataFromJPY-RUB.pix</Path>
+      <Path>CreateReportExcelFile.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i8">
       <IsMain>false</IsMain>
-      <Path>CreateReportExcelFile.pix</Path>
+      <Path>ConvertIntToWords.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i9">
       <IsMain>false</IsMain>
-      <Path>ConvertIntToWords.pix</Path>
+      <Path>SendMail.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i10">
       <IsMain>false</IsMain>
-      <Path>SendMail.pix</Path>
+      <Path>DeleteAllFilesInTemp.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i11">
       <IsMain>false</IsMain>
-      <Path>DeleteAllFilesInTemp.pix</Path>
-    </ProjectFileItem>
-    <ProjectFileItem z:Id="i12">
-      <IsMain>false</IsMain>
       <Path>GetMailFromGmail.pix</Path>
     </ProjectFileItem>
-    <ProjectFileItem z:Id="i13">
+    <ProjectFileItem z:Id="i12">
       <IsMain>false</IsMain>
       <Path>Data\Config.xlsx</Path>
     </ProjectFileItem>
