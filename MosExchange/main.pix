@@ -516,6 +516,46 @@
         <Text>Отправить сообщение</Text>
         <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
       </AbstractStep>
+      <AbstractStep z:Id="i73" i:type="ExecutedStep">
+        <Childs />
+        <Id>3a304a73-2594-4b9b-92bb-fffa16f7d0a3</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i74">
+            <PropertyName>FilePath</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>@"DeleteAllFilesInTemp.pix"</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i75">
+            <PropertyName>Parameters</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d7p1:ArrayOfArgumentItem">
+              <d7p1:ArgumentItem z:Id="i76">
+                <d7p1:ArgumentName>Config</d7p1:ArgumentName>
+                <d7p1:Expression>Config</d7p1:Expression>
+                <d7p1:Type>Dictionary&lt;System.String, System.String&gt;</d7p1:Type>
+              </d7p1:ArgumentItem>
+            </_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i77">
+            <PropertyName>Timeout</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:int">0</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Чистка временных файлов</Text>
+        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
+      </AbstractStep>
     </Childs>
     <Id>47d13b46-6a78-492e-b5eb-ea0b394e41fa</Id>
     <Parent i:nil="true" />
@@ -530,49 +570,49 @@
   <Name>main.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i73">
+    <Parameter z:Id="i78">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Config</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i74">
+    <Parameter z:Id="i79">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Period</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i75">
+    <Parameter z:Id="i80">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TableUSD_RUB</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i76">
+    <Parameter z:Id="i81">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TableJPY_RUB</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i77">
+    <Parameter z:Id="i82">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>CombinedTable</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i78">
+    <Parameter z:Id="i83">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>NumberInWords</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.String</TypeString>
     </Parameter>
-    <Parameter z:Id="i79">
+    <Parameter z:Id="i84">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>PathToReports</Name>

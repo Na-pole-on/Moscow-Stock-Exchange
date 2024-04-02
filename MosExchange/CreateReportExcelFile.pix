@@ -71,7 +71,7 @@
       </AbstractStep>
       <AbstractStep z:Id="i6" i:type="ExecutedStep">
         <Childs />
-        <Id>93433180-257c-4dc6-b77d-7ec027ca33f4</Id>
+        <Id>b055c139-3504-41af-aac2-48cbad11fd01</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
           <PropertyValue z:Id="i7">
@@ -193,7 +193,7 @@ CombinedTable = data.CopyToDataTable();</_value>
           <PropertyValue z:Id="i16">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>Path.Combine(Config["TempFolderPath"], "Report_" + Period["DateStart"].ToString("ddMMyy") + "_" + Period["DateFinish"].ToString("ddMMyy") + ".xlsx")</_expression>
+            <_expression>Path.Combine(Config["TempFolderPath"], "Report_" + Period["DateStart"].ToString("ddMMyy") + "_" + Period["DateFinish"].ToString("ddMMyy") + " (" + DateTime.Now.ToString("ddMMyyyy-HHmmss") + ") " + ".xlsx")</_expression>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
@@ -739,6 +739,47 @@ End With
         <Text>AutoFit</Text>
         <_activityFullName>BR.Core.Base.Container</_activityFullName>
       </AbstractStep>
+      <AbstractStep z:Id="i80" i:type="ExecutedStep">
+        <Childs />
+        <Id>dedd7381-d52a-416b-95ed-ddf88b580a3e</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i81">
+            <PropertyName>PathFrom</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>PathToReports</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i82">
+            <PropertyName>PathTo</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Config["ResultFolderPath"].ToString()</_expression>
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i83">
+            <PropertyName>WithDeleteFrom</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i84">
+            <PropertyName>WithDeleteTo</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:boolean">false</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>Activities.Files.CopyFileCatalog</_activityFullName>
+      </AbstractStep>
     </Childs>
     <Id>b3021232-c656-4bdc-9686-8cda6d21e536</Id>
     <Parent i:nil="true" />
@@ -755,42 +796,42 @@ End With
     <d2p1:string>Microsoft.Office.Interop.Excel</d2p1:string>
   </Namespaces>
   <Params>
-    <Parameter z:Id="i80">
+    <Parameter z:Id="i85">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TableUSD_RUB</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i81">
+    <Parameter z:Id="i86">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TableJPY_RUB</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i82">
+    <Parameter z:Id="i87">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>CombinedTable</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Data.DataTable</TypeString>
     </Parameter>
-    <Parameter z:Id="i83">
+    <Parameter z:Id="i88">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Config</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i84">
+    <Parameter z:Id="i89">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Period</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i85">
+    <Parameter z:Id="i90">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>PathToReports</Name>
@@ -800,7 +841,7 @@ End With
   </Params>
   <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
   <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
-    <d2p1:Variable z:Id="i86">
+    <d2p1:Variable z:Id="i91">
       <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
       <d2p1:Name>ListOfMonth</d2p1:Name>
       <d2p1:TypeString>System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</d2p1:TypeString>
